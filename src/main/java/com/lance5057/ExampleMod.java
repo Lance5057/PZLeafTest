@@ -1,11 +1,11 @@
-package com.example;
+package com.lance5057;
 
 import dev.aoqia.leaf.api.ModInitializer;
 
 import zombie.debug.DebugType;
 
 public class ExampleMod implements ModInitializer {
-    public static final String MOD_ID = "modid";
+    public static final String MOD_ID = "test";
     public static final DebugType LOGGER = DebugType.General;
 
     @Override

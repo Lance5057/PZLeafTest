@@ -1,8 +1,8 @@
 [versions]
 
-leaf-loader = "1.7.2"
-leaf-loom = "1.0.0"
-zomboid = "42.21.0"
+leaf-loader = "2.0.2"
+leaf-loom = "1.1.2"
+zomboid = "42.22.2"
 
 [libraries]
 

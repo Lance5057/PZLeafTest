@@ -1,4 +1,6 @@
-package com.example.mixin;
+package com.lance5057.mixin;
+
+import static com.lance5057.ExampleMod.LOGGER;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -9,8 +11,6 @@ import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 
 import zombie.core.Core;
 import zombie.iso.IsoPuddles;
-
-import static com.example.ExampleMod.LOGGER;
 
 @Mixin(Core.class)
 public class ExampleMixin {
