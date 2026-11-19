@@ -10,6 +10,6 @@ public class ExampleMod implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        LOGGER.debugln("[%s] %s", MOD_ID, "Hello Leaf World!!! >w<");
+
     }
 }

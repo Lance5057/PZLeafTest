@@ -3,7 +3,9 @@
     "package": "com.lance5057.mixin",
     "compatibilityLevel": "JAVA_25",
     "mixins": [
-        "ExampleMixin"
+        "ExampleMixin",
+		"DictionaryDataMixin",
+		"WorldDictionaryMixin"
     ],
     "injectors": {
         "defaultRequire": 1
