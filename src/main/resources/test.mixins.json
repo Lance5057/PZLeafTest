@@ -5,7 +5,8 @@
     "mixins": [
         "ExampleMixin",
 		"DictionaryDataMixin",
-		"WorldDictionaryMixin"
+		"WorldDictionaryMixin",
+		"ScriptManagerMixin"
     ],
     "injectors": {
         "defaultRequire": 1

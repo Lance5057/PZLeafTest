@@ -11,6 +11,7 @@ import org.spongepowered.asm.mixin.extensibility.IMixinInfo;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
 import com.lance5057.ExampleMod;
 
@@ -67,14 +68,16 @@ public class DictionaryDataMixin implements IMixinConfigPlugin {
 	}
 
 	@Inject(method = "getItemInfoFromID", at = @At("RETURN"), cancellable = true)
-	protected void getItemInfoFromID(CallbackInfoReturnable<ItemInfo> cir) {
-		ExampleMod.LOGGER.println("We don't do that no more. getItemInfoFromID - " + 0);
+	protected void getItemInfoFromID(short registeryID, CallbackInfoReturnable<ItemInfo> cir) {
+		ExampleMod.LOGGER.println("DictionaryData$getItemInfoFromID - " + registeryID);
 		cir.setReturnValue(null);
 	}
 
-	@Inject(method = "getItemInfoFromType", at = @At("HEAD"))
-	protected void getItemInfoFromType(CallbackInfoReturnable<ItemInfo> cir) {
-		ExampleMod.LOGGER.println("getItemInfoFromType - ");
+	@Inject(method = "getItemInfoFromType", at = @At("RETURN"))
+	protected void getItemInfoFromType(String fulltype, CallbackInfoReturnable<ItemInfo> cir) {
+		ExampleMod.LOGGER.println("DictionaryData$getItemInfoFromType - " + fulltype);
+		System.out.println("getItemInfoFromType - " + fulltype);
+		cir.setReturnValue(null);
 	}
 
 }
