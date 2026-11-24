@@ -2,11 +2,10 @@
     "required": true,
     "package": "com.lance5057.mixin",
     "compatibilityLevel": "JAVA_25",
+	"plugin": "com.lance5057.ConfigPlugin",
     "mixins": [
-        "ExampleMixin",
 		"DictionaryDataMixin",
-		"WorldDictionaryMixin",
-		"ScriptManagerMixin"
+		"accessors.DictionaryDataAccessor"
     ],
     "injectors": {
         "defaultRequire": 1
